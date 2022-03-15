@@ -1,70 +1,67 @@
-/** @format */
-
-import React from 'react';
-import { RiUser2Line } from 'react-icons/ri';
-import { RiLockPasswordLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { RiUser2Line } from "react-icons/ri";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <section className='h-screen w-full bg-primaryDark flex flex-col justify-center	items-center'>
-      <h2 className='font-semibold text-2xl text-green'>Sign In</h2>
-      <p className='m-3 text-lg text-primaryWhite'>Sign In To Continiue</p>
-      <form className='flex flex-col p-10 bg-secondaryDark'>
-        <div className='flex flex-col my-3'>
-          <label className='my-1 text-primaryWhite font-medium	 '>
-            UserName
-          </label>
-          <div className='flex rounded h-10 w-72  border-solid border-2 border-primaryWhite'>
-            <div className='w-full h-full basis-1/6 bg-secondaryWhite flex justify-center	items-center '>
-              <RiUser2Line className='text-secondaryDark' />
+    <section className="h-screen w-full bg-secondaryDark flex flex-col justify-center	items-center">
+      <h2 className="font-semibold text-2xl text-fontLightGrey">Sign In</h2>
+      <p className="m-3 text-lg text-fontGrey">Sign In To Continue</p>
+      <form className="flex flex-col p-12 bg-primaryDark rounded-sm">
+        <div className="flex flex-col my-3">
+          <label className="my-1 text-fontGrey font-medium	 "> UserName</label>
+          <div className="flex rounded h-12 w-80   border-primaryWhite">
+            <div className="w-full h-full basis-1/6 bg-secondaryDarkLight flex justify-center	items-center rounded-l-md">
+              <RiUser2Line className="text-fontLightGrey" />
             </div>
             <input
-              type='text'
-              name='username'
-              id='username'
-              placeholder='Enter Username'
-              className='  bg-secondaryWhite outline-none p-3 w-full '
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter Username"
+              className="  bg-primaryDarkLight outline-none p-3 w-full rounded-r-md"
             />
           </div>
         </div>
-        <div className='flex flex-col my-3'>
-          <label className='my-1 text-primaryWhite font-medium'>Password</label>
-          <div className='flex rounded h-10 w-72 border-solid border-2 border-primaryWhite'>
-            <div className='w-full h-full basis-1/6 bg-secondaryWhite flex justify-center	items-center'>
-              <RiLockPasswordLine className='text-secondaryDark' />
+        <div className="flex flex-col my-3">
+          <label className="my-1 text-fontGrey font-medium"> Password</label>
+          <div className="flex rounded h-12 w-80  border-primaryWhite">
+            <div className="w-full h-full basis-1/6 bg-secondaryDarkLight flex justify-center	items-center rounded-l-md">
+              <RiLockPasswordLine className="text-fontLightGrey" />
             </div>
             <input
-              type='text'
-              name='password'
-              id='password'
-              placeholder='Enter Password'
-              className='  bg-secondaryWhite outline-none p-3 w-full'
+              type="text"
+              name="password"
+              id="password"
+              placeholder="Enter Password"
+              className="  bg-primaryDarkLight outline-none p-3 w-full rounded-r-md"
             />
           </div>
         </div>
-        <Link to='/chat'>
+        <Link to="/chat">
           <input
-            type='submit'
-            value='Sign Up'
-            className='h-10 mt-4 w-72 rounded-sm text-primaryWhite bg-purple font-semibold cursor-pointer '
+            type="submit"
+            value="Sign In"
+            className="h-10 mt-4 w-80 rounded-sm text-primaryWhite bg-purple font-semibold cursor-pointer "
           />
         </Link>
-        <div className='flex flex-row justify-start items-center mt-6 '>
-          <input type='checkbox' className='text-ms ' />
-          <label for='checkbox' className='pl-2 text-primaryWhite text-md'>
+        <div className="flex flex-row justify-start items-center mt-6 ">
+          <input type="checkbox" className="text-ms" />
+          <label for="checkbox" className="pl-2 text-fontGrey text-md">
             Remember Me
           </label>
         </div>
         <Link
-          to='/reset'
-          className='flex justify-end text-sm text-primaryWhite'>
+          to="/reset"
+          className="flex justify-end text-sm text-fontGrey"
+        >
           Forgot Password?
         </Link>
       </form>
-      <p className='m-3 text-primaryWhite '>
-        Do Not Have An Account?{' '}
-        <Link to='/register' className='text-green cursor-pointer'>
+      <p className="m-3 text-fontGrey ">
+        Don't have an account ?{" "}
+        <Link to="/register" className="text-fontLightGrey cursor-pointer">
           Sign Up
         </Link>
       </p>
