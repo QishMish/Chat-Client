@@ -4,14 +4,14 @@ import { BsThreeDots } from "react-icons/bs";
 
 function ChatHeader() {
   return (
-    <div className="w-full basis-1/6 bg-primaryDark flex justify-between items-center px-8 border-secondaryDarkLight border-b-2 ">
-      <div className="flex justify-between items-center space-x-2 ">
+    <div className="flex items-center justify-between w-full h-32 px-8 border-b-2 bg-primaryDark border-secondaryDarkLight ">
+      <div className="flex items-center justify-between space-x-2 ">
         <img src={Avatar} alt="icon" className="w-12 h-12" />
-        <span className="text-md font-semibold text-fontLightGrey">
+        <span className="font-semibold text-md text-fontLightGrey">
           John Doe
         </span>
       </div>
-      <BsThreeDots className="w-8 h-8 text-fontLightGrey cursor-pointer"/>
+      <BsThreeDots className="w-8 h-8 cursor-pointer text-fontLightGrey"/>
     </div>
   );
 }
