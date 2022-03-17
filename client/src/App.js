@@ -1,12 +1,23 @@
-import { BrowserRouter } from 'react-router-dom';
-import Router from './router/Router';
-import "./style/dist/output.css"
+import { BrowserRouter } from "react-router-dom";
+import { connect } from "socket.io-client";
+
+import Router from "./router/Router";
+import "./style/dist/output.css";
 
 function App() {
+  const socket = connect("ws://sweeft-chat-app.herokuapp.com");
+
+  const emitSocket = () => {
+    socket.emit("message", "data");
+  };
+
   return (
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <>
+      <button onClick={() => emitSocket()}>request</button>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </>
   );
 }
 
